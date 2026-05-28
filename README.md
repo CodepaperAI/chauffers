@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Docklands 1998
 
-## Getting Started
+Premium Next.js website for Docklands 1998 chauffeur services in Melbourne and Victoria.
 
-First, run the development server:
+## Local Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open the local URL printed by Next.js, usually `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Email Enquiries With Resend
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The enquiry form posts to `src/app/api/enquiry/route.ts`. It validates the lead details server-side, sends the booking email through Resend when configured, and shows a WhatsApp fallback link if email is unavailable.
 
-## Learn More
+Create `.env.local` from `.env.example`:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+RESEND_API_KEY=re_your_api_key_here
+RESEND_FROM_EMAIL=Docklands 1998 <bookings@your-domain.com.au>
+RESEND_TO_EMAIL=bookings@your-domain.com.au
+RESEND_REPLY_TO=bookings@your-domain.com.au
+UPLIFTAI_API_TOKEN=uai_your_upliftai_token_here
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+For production, verify the sending domain in Resend and use that verified domain in `RESEND_FROM_EMAIL`. Add the same variables in the hosting provider environment settings before deployment.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Blog Feed With UpliftAI
 
-## Deploy on Vercel
+The blog pages use the server-side UpliftAI API from `src/lib/upliftai.ts`. The token must be stored as `UPLIFTAI_API_TOKEN` in `.env.local` for local development and in the hosting provider environment variables for production. Do not prefix this variable with `NEXT_PUBLIC_`; the token should never be exposed to the browser.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `/blog` lists published blog summaries.
+- `/blog/[slug]` loads a single post by slug.
+- The footer and primary navigation include a Blog link.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Checks
+
+```bash
+npm run lint
+npm run build
+```
