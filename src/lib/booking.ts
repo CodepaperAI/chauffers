@@ -12,16 +12,16 @@ export type LeadFormData = {
 
 export type LeadFormErrors = Partial<Record<keyof LeadFormData, string>>;
 
-export const phoneDisplay = "+61 450 866 577";
-export const phoneHref = "tel:+61450866577";
-export const whatsappNumber = "61450866577";
+export const phoneDisplay = "0403 803 263";
+export const phoneHref = "tel:+61403803263";
+export const whatsappNumber = "61403803263";
 
 export const serviceTypes = [
   "Airport transfer",
   "Luggage coordination",
   "Wedding transfer",
   "Corporate chauffeur",
-  "Winery or local tour",
+  "Winery or attraction tour",
   "Concert or event pickup",
   "Family travel",
   "Emergency ride",

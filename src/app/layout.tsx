@@ -29,6 +29,7 @@ export const metadata: Metadata = {
     "airport transfers Melbourne",
     "wedding chauffeur Melbourne",
     "Yarra Valley winery tour chauffeur",
+    "Puffing Billy chauffeur",
     "Great Ocean Road chauffeur",
     "Mount Hotham transfers",
     "Mornington Peninsula spa chauffeur",

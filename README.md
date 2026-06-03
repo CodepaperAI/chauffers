@@ -35,6 +35,10 @@ The blog pages use the server-side UpliftAI API from `src/lib/upliftai.ts`. The 
 - `/blog/[slug]` loads a single post by slug.
 - The footer and primary navigation include a Blog link.
 
+## Image Credits
+
+- Puffing Billy Railway image: [Philip Mallis via Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Puffing_Billy_locomotive_8A_hauling_train_towards_Belgrave_on_Gembrook_Railway_near_Belgrave_-_June_2023_-_01.jpg), [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/).
+
 ## Checks
 
 ```bash

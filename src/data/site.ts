@@ -89,7 +89,7 @@ export const serviceCards = [
     number: "06",
     title: "Tours and wineries",
     summary:
-      "Yarra Valley, Rayner's Orchard, Great Ocean Road, Mount Hotham and Mornington Peninsula.",
+      "Yarra Valley, Puffing Billy, Rayner's Orchard, Great Ocean Road, Mount Hotham and Mornington Peninsula.",
     image: "/site-photos/tours-wineries.jpg",
     alt: "Wine glasses on a vineyard table for private tours",
   },
@@ -138,6 +138,13 @@ export const tourCards = [
     route: "Family-friendly orchard stop with relaxed Yarra Valley touring.",
     image: "/site-photos/rayners-orchard.jpg",
     alt: "Fresh orchard produce for Rayner's Orchard family tours",
+  },
+  {
+    title: "Puffing Billy Railway",
+    route:
+      "Belgrave steam train pickups, Dandenong Ranges touring and relaxed Lakeside or Emerald timing.",
+    image: "/site-photos/puffing-billy-railway.jpg",
+    alt: "Puffing Billy steam locomotive near Belgrave in the Dandenong Ranges",
   },
   {
     title: "Great Ocean Road Australia",
