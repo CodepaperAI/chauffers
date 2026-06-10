@@ -532,6 +532,16 @@ a:focus-visible {
     box-shadow 180ms ease;
 }
 
+select.field option {
+  background: var(--charcoal);
+  color: var(--ivory);
+}
+
+select.field option:checked {
+  background: var(--gold);
+  color: #17110a;
+}
+
 .field::placeholder {
   color: rgba(243, 230, 204, 0.38);
 }
