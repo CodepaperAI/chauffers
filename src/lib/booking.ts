@@ -15,6 +15,8 @@ export type LeadFormErrors = Partial<Record<keyof LeadFormData, string>>;
 export const phoneDisplay = "0403 803 263";
 export const phoneHref = "tel:+61403803263";
 export const whatsappNumber = "61403803263";
+export const emailDisplay = "bookings@docklands1998.com.au";
+export const emailHref = `mailto:${emailDisplay}`;
 
 export const serviceTypes = [
   "Airport transfer",
