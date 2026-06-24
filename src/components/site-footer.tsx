@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { emailDisplay, emailHref, phoneDisplay, phoneHref } from "@/lib/booking";
 import { navLinks } from "@/data/site";
+import { locations } from "@/data/seo-locations";
 
 export function SiteFooter() {
   const contactDetails = [
@@ -107,6 +108,22 @@ export function SiteFooter() {
                 </div>
               );
             })}
+          </div>
+        </div>
+
+        <div className="border-b border-white/10 py-8">
+          <p className="text-[0.68rem] font-extrabold uppercase tracking-[0.24em] text-[#ddbd76]">
+            Service areas
+          </p>
+          <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+            <Link href="/service-areas" className="footer-link font-semibold text-[#fff8ec]">
+              All service areas
+            </Link>
+            {locations.map((loc) => (
+              <Link key={loc.slug} href={`/service-areas/${loc.slug}`} className="footer-link">
+                {loc.name}
+              </Link>
+            ))}
           </div>
         </div>
 
